@@ -37,7 +37,3 @@ class Stock:
         url= f'https://ngxgroup.com/exchange/data/company-profile/?symbol={upper_ticker}&directory=companydirectory'
         df= pd.read_html(url, match='Volume')[0]
         return df
-
-
-stock= Stock('ABCTRANS')
-print(stock.last_7_days())
